@@ -1,4 +1,4 @@
-package com.sql.accessingdatamysql.Implementation;
+/*package com.sql.accessingdatamysql.Implementation;
 
 import org.springframework.data.domain.AuditorAware;
 
@@ -10,4 +10,4 @@ public class AuditorAwareImpl implements AuditorAware<String> {
 
         return Optional.of("Mr.Auditor");
     }
-}
+} */

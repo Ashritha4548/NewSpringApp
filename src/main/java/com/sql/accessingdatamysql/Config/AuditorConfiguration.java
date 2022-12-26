@@ -1,4 +1,4 @@
-package com.sql.accessingdatamysql.Config;
+/* package com.sql.accessingdatamysql.Config;
 
 import com.sql.accessingdatamysql.Implementation.AuditorAwareImpl;
 import org.springframework.context.annotation.Bean;
@@ -16,4 +16,4 @@ public class AuditorConfiguration {
         return new AuditorAwareImpl();
     }
 
-}
+} */

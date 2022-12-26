@@ -12,6 +12,7 @@ import java.sql.Timestamp;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Data
+@Table(name = "Employee")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,13 +23,13 @@ public class Employee {
     private Integer EmpAge;
     private String EmpDesignation;
 
-    @CreationTimestamp
+   /* @CreationTimestamp
     @Column(nullable = false, updatable = false)
     private Timestamp CreatedDate;
 
     @UpdateTimestamp
     @Column(nullable = false)
-    private Timestamp LastModifiedDate;
+    private Timestamp LastModifiedDate;*/
 
 
 

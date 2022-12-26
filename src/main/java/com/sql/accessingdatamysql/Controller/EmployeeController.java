@@ -16,7 +16,7 @@ public class EmployeeController {
     private Employee employeeEntity = new Employee();
 
 
-    @PostMapping("/employee")
+   /*@PostMapping("/Employee")
     public String createEmployee() {
         employeeEntity.setEmpID(12);
         employeeEntity.setEmpName("Sravan");
@@ -24,16 +24,21 @@ public class EmployeeController {
         employeeEntity.setEmpDesignation("Manager");
         employeeRepository.save(employeeEntity);
         return "User Added Successfully";
-    }
+    } */
 
-    @GetMapping("/employee")
-    public List<Employee> getAllEmployee() {
+    @GetMapping("/Employee")
+    public @ResponseBody List<Employee> getAllEmployee() {
+        System.out.println(employeeRepository.findAll());
         return employeeRepository.findAll();
     }
-
+    @PostMapping("/employees")
+    Employee newEmployee(@RequestBody Employee newEmployee) {
+        return employeeRepository.save(newEmployee);
+    }
 
     @DeleteMapping("employee/{EmpId}")
     public void deleteemployee(@PathVariable int EmpId) {
+
         employeeRepository.deleteById(EmpId);
     }
 }
